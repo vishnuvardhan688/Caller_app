@@ -1,0 +1,36 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+.contact-app-add-contact-wrapper {
+  display: flex;
+  height: 32px;
+  align-items: stretch;
+  margin-bottom: 24px;
+}
+
+.contact-app-text-input {
+  background: #ffffff;
+  border: 1px solid #bfb8cc;
+  border-radius: 4px;
+  padding: 6px 12px;
+  margin-right: 10px;
+}
+
+.contact-app-submit-new-contact-button {
+  width: 72px;
+  background: #48bb78;
+  border-radius: 4px;
+  border-radius: 4px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.contact-app-delete-contact {
+  margin-left: 10px;
+  display: flex;
+  justify-content: flex-end;
+}

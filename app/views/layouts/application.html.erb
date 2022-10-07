@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<%# <script type="text/javascript" src="../../assets/javascripts/browser-calls.js"></script> %>
+<head>
+  <title>Browser Calls</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- CSS -->
+  <%= stylesheet_link_tag "//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" %>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Caller app</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="nav navbar-nav navbar-right">
+            <% if($current_user) %>
+              <li><a data-method="get" href="<%= destroy_session_path %>" rel="nofollow" >Sign out</a></li>
+             <% end %>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <%= yield %>
+      <footer>
+        <%# <p>&copy; Your Company <%= Time.now.year %></p>
+      </footer>
+
+    </div> <!-- /container -->
+    <script type="text/javascript" src="//sdk.twilio.com/js/client/releases/1.10.1/twilio.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src=<%= asset_path('browser-calls') %>></script>
+</body>
+</html>
